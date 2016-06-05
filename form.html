@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        /* this is a child selector */
+        label span {color: red;} 
+        /* these are attribute selectors */
+        input[type="text"] {width: 200px;}
+        input[type="email"] {width: 200px;}
+        input[type="submit"] {display: block; margin: }
+        form {max-width: 400px; background-color: gray;}
+        .formBtmMg {margin-bottom: 20px;}
+        .submitBtn {margin: 40px auto 20px auto;}
+        .chkBox {display:block;}
+    </style>
+</head>
+<body>
+
+<main>
+    <form action="contact.php" method="post">
+        <fieldset>
+            <legend>Contact Us</legend>
+
+            <label>Name:<span>&#42;</span></label><br />
+            <input type="text" name="yourname" placeholder="First and Last Name" required /><br />
+
+            <label>E-mail Address:<span>&#42;</span></label><br />
+            <input type="email" name="email" placeholder="Email Address" required /><br />
+
+            <label>Subject:<span>&#42;</span></label><br />
+            <input type="text" name="subject" placeholder="Subject" class="formBtmMg" required /><br />
+
+            <label>Questions/Comments:<span>&#42;</span></label><br />
+            <textarea name="comments" rows="5" cols="26" placeholder="Your questions and / or comments here" class="formBtmMg" required /></textarea><br />
+
+            <label>Subscribe to our eNewsletter?</label><br />
+            <input type="radio" name="subscribe" value="Yes" checked="checked" /> Yes
+            <input type="radio" name="subscribe" value="No" class="formBtmMg" /> No<br />
+
+
+            <label>How did you find out about us?</label>
+                <select name="how" class="formBtmMg">
+                    <option value=""> -- Please select -- </option>
+                    <option>Yelp</option>
+                    <option>Google</option>
+                    <option>Groupon</option>
+                    <option>Newspaper Ad</option>
+                </select><br />
+
+            <div class="formBtmMg">
+                <label>Where are you traveling from?</label>
+                    <select name="where" size="3">
+                        <option selected>San Diego</option>
+                        <option>Los Angeles</option>
+                        <option>Arizona</option>
+                        <option>Other, U.S.</option>
+                         <option>Other, outside U.S.</option>
+                    </select>
+            </div>
+
+
+            <label>If renting, which type of equipment will you rent?</label><br />
+
+                <div class="chkBox">
+                    <input type="checkbox" name="rental_list[]" value="powerboats ">
+                    <label>Powerboats</label>
+                </div>
+
+                <div class="chkBox">
+                    <input type="checkbox" name="rental_list[]" value="waverunners ">
+                    <label>Waverunners</label>
+                </div>
+
+                <div class="chkBox">
+                    <input type="checkbox" name="rental_list[]" value="pedal boats ">
+                    <label>Pedal Boats</label><br />
+                </div>
+
+                <div class="chkBox">
+                    <input type="checkbox" name="rental_list[]" value="stand-up paddleboards ">
+                    <label>Stand-Up Paddleboards</label>
+                </div>
+
+                <div class="chkBox">
+                    <input type="checkbox" name="rental_list[]" value="kayaks ">
+                    <label>Kayaks</label>
+                </div>
+
+                <div class="chkBox">
+                    <input type="checkbox" name="rental_list[]" value="bicycles">
+                    <label>Bicycles</label>
+                </div>
+
+           <input type="submit" value="Submit" class="submitBtn">
+
+        </fieldset>
+    </form>
+
+</main>
+</body>
+</html>
